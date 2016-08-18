@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    text-align: center;
+    background-color: #63D8FF;
+}
+header {
+    width: 100%;
+    background-color: #63D8FF;
+    height:740px;
+}
+.mylogo {
+    margin-top: 3%;
+    width: 7.5%;
+}
+.tweet-logo {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 2.5%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+}
+.tweet-heading {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 3%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #B2EDFF;
+}
+.tweet-enter {
+    outline: 0;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 2.5%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #00C0FF;
+    background-color: #A1F09E;
+    border-width: 0px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    box-shadow: 0px 5px #96DE93;
+    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	-moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	-o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+.tweet-enter:hover {
+    color: #1CD100;
+}
+.tweet-enter:active {
+    box-shadow: 0px 0px #96DE93;
+    transform: translateY(5px);
+}
+.tweet-data {
+    margin: 50px;
+}
+.tweet-bio {
+    outline: 0;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2.5%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    color: #00C0FF;
+    background-color: #A1F09E;
+    border-width: 0px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 10px;
+    width: 20%;
+    box-shadow: 0px 5px #96DE93;
+    -webkit-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	-moz-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	-o-transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+	transition: color .25s linear, background-color .25s ease-in-out, border-color .25s ease-in-out;
+}
+.tweet-bio:hover {
+    color: #1CD100;
+}
+.tweet-bio:active {
+    box-shadow: 0px 0px #96DE93;
+    transform: translateY(5px);
+}
+#about {
+    width: 100%;
+    height: 740px;
+    background-color: #A3FF9F;
+}
+.projdata {
+    font-size: 80px;
+    text-align: center;
+    padding-top: 3%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 800;
+    color: #00C0FF;
+}
+.gov-data {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 3%;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    margin: 5px;
+}
+.gov-tools {
+    color: #00C0FF;
+}
