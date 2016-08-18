@@ -32,7 +32,6 @@ function checkLocation() {
 			}
 
 	    	map.setCenter(mapCenter);
-			checkDatabase();
 		},
 	  	error: function(error) {
 			mapCenter = {
@@ -61,10 +60,10 @@ function clearOverlays() {
 }
 
 function checkDatabase() {
-	database.on('value', function(snapshot) {
+	database.once('value', function(snapshot) {
 		var dataSnap = snapshot.val();
 
-		console.log(dataSnap);
+		console.log("checking");
 
 		clearOverlays();
 
@@ -93,3 +92,4 @@ function checkDatabase() {
 };
 
 checkLocation();
+checkDatabase();
