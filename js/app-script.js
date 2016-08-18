@@ -2,7 +2,6 @@ var mapCenter
 var polygonThere = false;
 var mapPolygon;
 var oneOverlay;
-var overlayExist = 0;
 
 var markerGroup = [];
 
@@ -54,17 +53,20 @@ function checkLocation() {
 	});
 };
 
+function clearOverlays() {
+  for (var i = 0; i < markerGroup.length; i++ ) {
+    markerGroup[i].setMap(null);
+  }
+  markerGroup.length = 0;
+}
+
 function checkDatabase() {
 	database.on('value', function(snapshot) {
 		var dataSnap = snapshot.val();
 
 		console.log(dataSnap);
 
-		if (overlayExist == 1){
-
-			markerGroup.splice(0,markerGroup.length);
-			console.log(markerGroup.length)
-		}
+		clearOverlays();
 
 		for (var property in dataSnap) {
 			if (dataSnap[property].coordinates != undefined) {
@@ -87,8 +89,6 @@ function checkDatabase() {
 				markerGroup.push(myMarker);
 			}
 		}
-
-		overlayExist = 1;
 	});
 };
 
