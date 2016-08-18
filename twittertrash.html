@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TweetSweep</title>
+
+        <!--￼ -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- CSS Links Go Here -->
+        <link href="https://fonts.googleapis.com/css?family=Dosis:400,600,700,800" rel="stylesheet">
+        <link href="css/hover-min.css" rel="stylesheet">
+        <link href="css/app-style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <ul>
+                <li><button id="logo">#TweetSweepASC</button></li>
+            </ul>
+        </header>
+        <div>
+            <div id="data">
+                <div id="map-info">
+                    <ul>
+                        <button class="map-button" onclick="checkLocation()">FIND ME!</button>
+                        <button class="map-button" onclick="checkDatabase()">REFRESH</button>
+                    </ul>
+                    <div id="map"></div>
+                </div>
+
+                <div id="tweet-info">
+                    <div class="tweet-head">TWEET</div>
+                    <div id="tweets">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="instruct">
+            <h1 class="instruct-text">HOW 2 TWEET</h1>
+            <img src="media/androidflow.gif" class="instruct-image">
+        </div>
+
+        <!-- JS Links Go Here-->
+        <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFQv7yOsP7ZveY7amnP9bIwB_okxbfI5U&libraries=geometry"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+        <script src="js/app-script.js"></script>
+    </body>
+</html>

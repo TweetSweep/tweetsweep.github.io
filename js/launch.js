@@ -6,6 +6,6 @@ $("#aboutproject").click(function() {
 
 $("#mainhelp").click(function() {
     $('body').fadeOut(500, function(){
-        window.location.href='app';
+        window.location.href='twittertrash.html';
     });
 });

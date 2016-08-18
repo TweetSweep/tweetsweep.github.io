@@ -189,3 +189,20 @@ header {
     margin:5%;
 
 }
+#instruct {
+    width: 90%;
+}
+.instruct-text {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.instruct-image {
+    width: 35%;
+    height: 70%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 10%;
+}
