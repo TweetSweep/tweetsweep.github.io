@@ -70,19 +70,13 @@ function checkDatabase() {
 		for (var property in dataSnap) {
 			if (dataSnap[property].coordinates != undefined) {
 				var twt = "https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2F" + dataSnap[property].link.substring(20, dataSnap[property].link.indexOf("/status")) + "%2Fstatus" + "%2F" + dataSnap[property].link.substring(dataSnap[property].link.indexOf("/status") + 8);
-				var myMarker = map.addMarker({
+				var myMarker = map.drawOverlay({
 					lat: dataSnap[property].coordinates.coordinates[1],
 					lng: dataSnap[property].coordinates.coordinates[0],
-					animation: google.maps.Animation.DROP,
 					mylink: dataSnap[property].link,
 					user: dataSnap[property].link.substring(20, dataSnap[property].link.indexOf("/status")),
 					id: dataSnap[property].link.substring(dataSnap[property].link.indexOf("/status") + 8),
-					chosenString: twt,
-					click: function() {
-						$("#tweets").empty();
-						$("#tweets").append('<iframe border=0 frameborder=0 height=500 width=375 src="'+this.chosenString+'"></iframe>');
-
-					}
+					content: '<iframe border=0 frameborder=0 height=500 width=375 src="'+twt+'"></iframe>',
 				});
 
 				markerGroup.push(myMarker);
